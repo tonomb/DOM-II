@@ -39,8 +39,29 @@ document.addEventListener('keydown',function(e){
     
 
 
-//  drag / drop
+//  drag / drop  drag second image over to content
 
+    const adventureImg = document.querySelector('#adventure-img');
+    const containerOne = document.querySelector('.text-content');
+    const containerTwo = document.querySelector('.img-content');
+
+    containerOne.addEventListener("dragover", dragover);
+    containerOne.addEventListener("dragenter", dragenter);
+    containerOne.addEventListener("drop", drop);
+
+    containerTwo.addEventListener("dragover", dragover);
+    containerTwo.addEventListener("dragenter", dragenter);
+    containerTwo.addEventListener("drop", drop);
+
+    function dragover(e) {
+        e.preventDefault()
+    }
+    function dragenter(e) {
+        e.preventDefault()
+    }
+    function drop() {
+        this.prepend(adventureImg)
+    }
 
 //  load logs when page loaded
 
