@@ -53,12 +53,18 @@ window.addEventListener('DOMContentLoaded', function(e){
     
 })
 
-//  focus
+//  focus  focus on form input
 
-const signUpOne = document.querySelector('.destination .btn');
-signUpOne.addEventListener('focus', function(event){
-    console.log(event)
-})
+const inputsContactForm = document.querySelector('.contact-form');
+
+inputsContactForm.addEventListener('focus', function(e){
+    e.target.style.transform = 'scale(1.05)';
+    e.target.style.border = '5px solid teal';
+}, true)
+inputsContactForm.addEventListener('blur', function(e){
+    e.target.style.transform = 'scale(1)';
+    e.target.style.border = '1px solid teal';
+}, true)
 
 //  resize
 //  scroll
