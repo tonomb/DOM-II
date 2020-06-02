@@ -54,6 +54,12 @@ window.addEventListener('DOMContentLoaded', function(e){
 })
 
 //  focus
+
+const signUpOne = document.querySelector('.destination .btn');
+signUpOne.addEventListener('focus', function(event){
+    console.log(event)
+})
+
 //  resize
 //  scroll
 //  select
