@@ -75,6 +75,16 @@ function imageResize(){
 window.addEventListener('resize', imageResize);
 
 //  scroll
+function handleScroll(event){
+    console.log(document.documentElement.scrollTop);
+    
+    if(document.body.scrollTop > 350|| document.documentElement.scrollTop > 350){
+        document.body.style.backgroundColor = 'red';
+    }
+    
+}
+
+window.addEventListener('scroll', handleScroll)
 //  select
 //  dblclick
 
