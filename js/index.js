@@ -76,15 +76,33 @@ window.addEventListener('resize', imageResize);
 
 //  scroll
 function handleScroll(event){
-    console.log(document.documentElement.scrollTop);
-    
     if(document.body.scrollTop > 350|| document.documentElement.scrollTop > 350){
-        document.body.style.backgroundColor = 'red';
+        document.body.style.color = 'teal';
     }
     
 }
 
 window.addEventListener('scroll', handleScroll)
-//  select
-//  dblclick
+//  select   log selected text in input contact form
+
+function highlightSelected(event){
+    console.log(event.target.value.substring(event.target.selectionStart, event.target.selectionEnd));
+}
+
+const firstParagraph = document.querySelector('form');
+firstParagraph.addEventListener('select',highlightSelected);
+  
+  
+
+//  dblclick  double click on buttons
+
+const pageButtons = document.querySelectorAll('.btn');
+
+pageButtons.forEach(button =>{
+    button.addEventListener('dblclick', function(e){
+        e.target.style.transform = 'rotate(90deg)';
+        console.log('clicked');
+        
+    })
+});
 
