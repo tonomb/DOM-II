@@ -24,7 +24,7 @@ document.addEventListener('keydown',function(e){
     }
 });
 
-//  wheel  zoom on 3rd boat image
+//  wheel  scroll over 3rd boat image
 
     let destinationImg = document.querySelector('.content-destination img')
     
@@ -40,7 +40,19 @@ document.addEventListener('keydown',function(e){
 
 
 //  drag / drop
-//  load
+
+
+//  load logs when page loaded
+
+window.addEventListener('load', function(e){
+    console.log('page finished loading', e.timeStamp);
+    
+})
+window.addEventListener('DOMContentLoaded', function(e){
+    console.log('Dom fully loaded and parsed', e.timeStamp);
+    
+})
+
 //  focus
 //  resize
 //  scroll
