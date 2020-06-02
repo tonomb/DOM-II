@@ -66,7 +66,14 @@ inputsContactForm.addEventListener('blur', function(e){
     e.target.style.border = '1px solid teal';
 }, true)
 
-//  resize
+//  resizev bus image at half of page width
+
+function imageResize(){
+    busImg.width = window.innerWidth * .5;
+}
+
+window.addEventListener('resize', imageResize);
+
 //  scroll
 //  select
 //  dblclick
