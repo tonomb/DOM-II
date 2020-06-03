@@ -30,3 +30,20 @@
     color: @button-bg;
   }
 }
+
+.btn-custom(@bgColor: teal, @color: white, @width: 100%){
+  display:block;
+  width: @width;
+  color: @color;
+  background-color:@bgColor;
+  border-radius: 18px;
+  font-size: 2rem;
+  padding: 5%;
+  text-align: center;
+
+  &:hover{
+      background-color: @color;
+      border: 2px solid @bgColor;
+      color: @bgColor;
+  }
+}
